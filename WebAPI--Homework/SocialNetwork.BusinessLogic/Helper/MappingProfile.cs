@@ -1,5 +1,4 @@
-﻿using System;
-using System.Text;
+﻿using System.Text;
 using AutoMapper;
 using SocialNetwork.Model.DatabaseModels;
 using SocialNetwork.Model.DTOs;
@@ -11,7 +10,7 @@ namespace SocialNetwork.BusinessLogic.Helper
 	{
 		public MappingProfile()
 		{
-			var hmac = new HMACSHA512();
+			var hmac = new HMACSHA256();
 
 			CreateMap<User, SignInOrUpDto>();
 			CreateMap<SignInOrUpDto, User>()
@@ -20,6 +19,10 @@ namespace SocialNetwork.BusinessLogic.Helper
 				.ForMember("PasswordSalt", opt => opt.MapFrom(ud => hmac.Key));
 			CreateMap<User, UserDto>();
 			CreateMap<UserDto, User>();
+			CreateMap<RefreshTokenDto, User>()
+				.ForMember("RefreshToken", opt => opt.MapFrom(opt => opt.Token))
+				.ForMember("TokenExpires", opt => opt.MapFrom(opt => opt.Expires))
+				.ForMember("TokenCreated", opt => opt.MapFrom(opt => opt.Created));
 		}
 	}
 }

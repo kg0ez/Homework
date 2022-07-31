@@ -1,5 +1,4 @@
-﻿using System;
-using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.EntityFrameworkCore;
 using SocialNetwork.Model.DatabaseModels;
 
 namespace SocialNetwork.Model.Database

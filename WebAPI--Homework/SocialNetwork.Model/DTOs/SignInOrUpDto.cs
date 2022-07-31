@@ -1,5 +1,4 @@
-﻿using System;
-namespace SocialNetwork.Model.DTOs
+﻿namespace SocialNetwork.Model.DTOs
 {
 	public class SignInOrUpDto
 	{

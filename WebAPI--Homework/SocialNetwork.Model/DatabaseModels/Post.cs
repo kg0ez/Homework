@@ -1,5 +1,4 @@
-﻿using System;
-namespace SocialNetwork.Model.DatabaseModels
+﻿namespace SocialNetwork.Model.DatabaseModels
 {
 	public class Post
 	{

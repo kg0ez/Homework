@@ -1,21 +1,23 @@
-﻿using System;
-using System.IdentityModel.Tokens.Jwt;
+﻿using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 using System.Text;
 using Microsoft.Extensions.Configuration;
 using Microsoft.IdentityModel.Tokens;
 using SocialNetwork.BusinessLogic.Services.Interfaces;
 using SocialNetwork.Model.DatabaseModels;
+using SocialNetwork.Model.DTOs;
+
+using System.Security.Cryptography;
 
 namespace SocialNetwork.BusinessLogic.Services.Implementations
 {
 	public class TokenService: ITokenService
 	{
         private readonly SymmetricSecurityKey _key;
-        public TokenService(IConfiguration config)
-        {
+
+        public TokenService(IConfiguration config)=>
             _key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(config["TokenKey"]));
-        }
+
         public string CreateToken(User user)
         {
             var claims = new List<Claim>
@@ -36,6 +38,19 @@ namespace SocialNetwork.BusinessLogic.Services.Implementations
 
             return tokenHandler.WriteToken(token);
         }
+
+        public RefreshTokenDto GenerateRefreshToken()
+        {
+            var refreshToken = new RefreshTokenDto
+            {
+                Token = Convert.ToBase64String(RandomNumberGenerator.GetBytes(64)),
+                Expires = DateTime.Now.AddDays(7),
+                Created = DateTime.Now
+            };
+
+            return refreshToken;
+        }
+
     }
 }
 
