@@ -1,0 +1,14 @@
+/Users/kirill/Desktop/Homework/WebAPI--Homework/SocialNetwork.Model/bin/Debug/net6.0/SocialNetwork.Model.deps.json
+/Users/kirill/Desktop/Homework/WebAPI--Homework/SocialNetwork.Model/bin/Debug/net6.0/SocialNetwork.Model.runtimeconfig.json
+/Users/kirill/Desktop/Homework/WebAPI--Homework/SocialNetwork.Model/bin/Debug/net6.0/SocialNetwork.Model.dll
+/Users/kirill/Desktop/Homework/WebAPI--Homework/SocialNetwork.Model/bin/Debug/net6.0/SocialNetwork.Model.pdb
+/Users/kirill/Desktop/Homework/WebAPI--Homework/SocialNetwork.Model/obj/Debug/net6.0/SocialNetwork.Model.csproj.AssemblyReference.cache
+/Users/kirill/Desktop/Homework/WebAPI--Homework/SocialNetwork.Model/obj/Debug/net6.0/SocialNetwork.Model.GeneratedMSBuildEditorConfig.editorconfig
+/Users/kirill/Desktop/Homework/WebAPI--Homework/SocialNetwork.Model/obj/Debug/net6.0/SocialNetwork.Model.AssemblyInfoInputs.cache
+/Users/kirill/Desktop/Homework/WebAPI--Homework/SocialNetwork.Model/obj/Debug/net6.0/SocialNetwork.Model.AssemblyInfo.cs
+/Users/kirill/Desktop/Homework/WebAPI--Homework/SocialNetwork.Model/obj/Debug/net6.0/SocialNetwork.Model.csproj.CoreCompileInputs.cache
+/Users/kirill/Desktop/Homework/WebAPI--Homework/SocialNetwork.Model/obj/Debug/net6.0/SocialNetwork.Model.dll
+/Users/kirill/Desktop/Homework/WebAPI--Homework/SocialNetwork.Model/obj/Debug/net6.0/refint/SocialNetwork.Model.dll
+/Users/kirill/Desktop/Homework/WebAPI--Homework/SocialNetwork.Model/obj/Debug/net6.0/SocialNetwork.Model.pdb
+/Users/kirill/Desktop/Homework/WebAPI--Homework/SocialNetwork.Model/obj/Debug/net6.0/SocialNetwork.Model.genruntimeconfig.cache
+/Users/kirill/Desktop/Homework/WebAPI--Homework/SocialNetwork.Model/obj/Debug/net6.0/ref/SocialNetwork.Model.dll

@@ -1,0 +1,17 @@
+/Users/kirill/Desktop/Homework/WebAPI--Homework/SocialNetwork.BusinessLogic/bin/Debug/net6.0/SocialNetwork.BusinessLogic.deps.json
+/Users/kirill/Desktop/Homework/WebAPI--Homework/SocialNetwork.BusinessLogic/bin/Debug/net6.0/SocialNetwork.BusinessLogic.runtimeconfig.json
+/Users/kirill/Desktop/Homework/WebAPI--Homework/SocialNetwork.BusinessLogic/bin/Debug/net6.0/SocialNetwork.BusinessLogic.dll
+/Users/kirill/Desktop/Homework/WebAPI--Homework/SocialNetwork.BusinessLogic/bin/Debug/net6.0/SocialNetwork.BusinessLogic.pdb
+/Users/kirill/Desktop/Homework/WebAPI--Homework/SocialNetwork.BusinessLogic/bin/Debug/net6.0/SocialNetwork.Model.dll
+/Users/kirill/Desktop/Homework/WebAPI--Homework/SocialNetwork.BusinessLogic/bin/Debug/net6.0/SocialNetwork.Model.pdb
+/Users/kirill/Desktop/Homework/WebAPI--Homework/SocialNetwork.BusinessLogic/obj/Debug/net6.0/SocialNetwork.BusinessLogic.csproj.AssemblyReference.cache
+/Users/kirill/Desktop/Homework/WebAPI--Homework/SocialNetwork.BusinessLogic/obj/Debug/net6.0/SocialNetwork.BusinessLogic.GeneratedMSBuildEditorConfig.editorconfig
+/Users/kirill/Desktop/Homework/WebAPI--Homework/SocialNetwork.BusinessLogic/obj/Debug/net6.0/SocialNetwork.BusinessLogic.AssemblyInfoInputs.cache
+/Users/kirill/Desktop/Homework/WebAPI--Homework/SocialNetwork.BusinessLogic/obj/Debug/net6.0/SocialNetwork.BusinessLogic.AssemblyInfo.cs
+/Users/kirill/Desktop/Homework/WebAPI--Homework/SocialNetwork.BusinessLogic/obj/Debug/net6.0/SocialNetwork.BusinessLogic.csproj.CoreCompileInputs.cache
+/Users/kirill/Desktop/Homework/WebAPI--Homework/SocialNetwork.BusinessLogic/obj/Debug/net6.0/SocialNetwork.BusinessLogic.csproj.CopyComplete
+/Users/kirill/Desktop/Homework/WebAPI--Homework/SocialNetwork.BusinessLogic/obj/Debug/net6.0/SocialNetwork.BusinessLogic.dll
+/Users/kirill/Desktop/Homework/WebAPI--Homework/SocialNetwork.BusinessLogic/obj/Debug/net6.0/refint/SocialNetwork.BusinessLogic.dll
+/Users/kirill/Desktop/Homework/WebAPI--Homework/SocialNetwork.BusinessLogic/obj/Debug/net6.0/SocialNetwork.BusinessLogic.pdb
+/Users/kirill/Desktop/Homework/WebAPI--Homework/SocialNetwork.BusinessLogic/obj/Debug/net6.0/SocialNetwork.BusinessLogic.genruntimeconfig.cache
+/Users/kirill/Desktop/Homework/WebAPI--Homework/SocialNetwork.BusinessLogic/obj/Debug/net6.0/ref/SocialNetwork.BusinessLogic.dll

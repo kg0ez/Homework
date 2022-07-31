@@ -1,0 +1,7 @@
+﻿<Properties StartupConfiguration="{16071BA8-E2E0-412A-BAE0-F9889B0A4B9B}|Default">
+  <MonoDevelop.Ide.ItemProperties.Model.SocialNetwork.Model FirstBuild="True" />
+  <MonoDevelop.Ide.ItemProperties.Infrastructure.SocialNetwork.Parser FirstBuild="True" />
+  <MonoDevelop.Ide.ItemProperties.Business_220Logic.SocialNetwork.BusinessLogic FirstBuild="True" />
+  <MonoDevelop.Ide.ItemProperties.Api.SocialNetwork FirstBuild="True" PreferredExecutionTarget="/Applications/Safari.app" />
+  <MultiItemStartupConfigurations />
+</Properties>
