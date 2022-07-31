@@ -7,6 +7,7 @@ namespace SocialNetwork.Model.DatabaseModels
 		public string Login { get; set; }
 		public byte[] PasswordHash { get; set; }
 		public byte[] PasswordSalt { get; set; }
+		public List<Post> Posts { get; set; }
 	}
 }
 

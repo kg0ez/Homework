@@ -7,8 +7,9 @@ namespace SocialNetwork.BusinessLogic.Services.Interfaces
 	{
 		public bool Register(SignInOrUpDto registerDto);
 		//public UserDto Register(RegisterDto registerDto);
-		public UserDto Login(SignInOrUpDto loginDto);
-		public bool UserExists(string login);
+		UserDto Login(SignInOrUpDto loginDto);
+		bool UserExists(string login);
+		bool Save();
 	}
 }
 
