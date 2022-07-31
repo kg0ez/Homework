@@ -1,7 +1,73 @@
 ﻿<Properties StartupConfiguration="{16071BA8-E2E0-412A-BAE0-F9889B0A4B9B}|Default">
-  <MonoDevelop.Ide.ItemProperties.Model.SocialNetwork.Model FirstBuild="True" />
-  <MonoDevelop.Ide.ItemProperties.Infrastructure.SocialNetwork.Parser FirstBuild="True" />
-  <MonoDevelop.Ide.ItemProperties.Business_220Logic.SocialNetwork.BusinessLogic FirstBuild="True" />
-  <MonoDevelop.Ide.ItemProperties.Api.SocialNetwork FirstBuild="True" PreferredExecutionTarget="/Applications/Safari.app" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="SocialNetwork.Model/Database/ApplicationContext.cs">
+    <Files>
+      <File FileName="SocialNetwork.BusinessLogic/Helper/MappingProfile.cs" Line="1" Column="1" />
+      <File FileName="SocialNetwork.BusinessLogic/Services/Implementations/TokenService.cs" Line="20" Column="1" />
+      <File FileName="SocialNetwork.BusinessLogic/Services/Implementations/UserService.cs" Line="64" Column="1" />
+      <File FileName="SocialNetwork.BusinessLogic/Services/Interfaces/ITokenService.cs" Line="1" Column="1" />
+      <File FileName="SocialNetwork.BusinessLogic/Services/Interfaces/IUserService.cs" Line="1" Column="1" />
+      <File FileName="SocialNetwork.Model/Database/ApplicationContext.cs" Line="24" Column="6" />
+      <File FileName="SocialNetwork.Model/DatabaseModels/Post.cs" Line="1" Column="1" />
+      <File FileName="SocialNetwork.Model/DatabaseModels/User.cs" Line="1" Column="1" />
+      <File FileName="SocialNetwork.Model/DTOs/RefreshTokenDto.cs" Line="1" Column="1" />
+      <File FileName="SocialNetwork.Model/DTOs/SignInOrUpDto.cs" Line="1" Column="1" />
+      <File FileName="SocialNetwork.Model/DTOs/UserDto.cs" Line="11" Column="1" />
+      <File FileName="SocialNetwork/Controllers/UserController.cs" Line="1" Column="1" />
+      <File FileName="SocialNetwork.Parser/Program.cs" Line="37" Column="22" />
+      <File FileName="SocialNetwork.Parser/Services/Interfaces/IArticle.cs" Line="9" Column="35" />
+      <File FileName="SocialNetwork.Parser/Services/Implementations/ChukotkaArticle.cs" Line="16" Column="1" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="WebAPI--Homework" expanded="True">
+            <Node name="Api" expanded="True">
+              <Node name="SocialNetwork" expanded="True">
+                <Node name="Controllers" expanded="True" />
+                <Node name="Migrations" expanded="True" />
+                <Node name="Properties" expanded="True" />
+              </Node>
+            </Node>
+            <Node name="Business Logic" expanded="True">
+              <Node name="SocialNetwork.BusinessLogic" expanded="True">
+                <Node name="Helper" expanded="True" />
+                <Node name="Services" expanded="True">
+                  <Node name="Implementations" expanded="True" />
+                  <Node name="Interfaces" expanded="True" />
+                </Node>
+              </Node>
+            </Node>
+            <Node name="Infrastructure" expanded="True">
+              <Node name="SocialNetwork.Parser" expanded="True">
+                <Node name="Services" expanded="True">
+                  <Node name="Implementations" expanded="True" />
+                  <Node name="Interfaces" expanded="True" />
+                </Node>
+              </Node>
+            </Node>
+            <Node name="Model" expanded="True">
+              <Node name="SocialNetwork.Model" expanded="True">
+                <Node name="Database" expanded="True">
+                  <Node name="ApplicationContext.cs" selected="True" />
+                </Node>
+                <Node name="DatabaseModels" expanded="True" />
+                <Node name="DTOs" expanded="True" />
+              </Node>
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+      <Pad Id="MonoDevelop.Debugger.WatchPad">
+        <State />
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
   <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.ItemProperties.Infrastructure.SocialNetwork.Parser FirstBuild="True" />
+  <MonoDevelop.Ide.ItemProperties.Api.SocialNetwork PreferredExecutionTarget="/Applications/Safari.app" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
 </Properties>
