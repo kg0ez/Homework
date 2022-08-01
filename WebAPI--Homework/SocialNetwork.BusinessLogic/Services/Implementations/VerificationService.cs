@@ -21,7 +21,7 @@ namespace SocialNetwork.BusinessLogic.Services.Implementations
                 passwordHash = hmac.ComputeHash(Encoding.UTF8.GetBytes(password));
             }
         }
-        public bool VerifyPasswordHash(string password, byte[] passwordHash, byte[] passwordSalt)
+        public bool IsVerifyPasswordHash(string password, byte[] passwordHash, byte[] passwordSalt)
         {
             using (var hmac = new HMACSHA256(passwordSalt))
             {
@@ -29,7 +29,7 @@ namespace SocialNetwork.BusinessLogic.Services.Implementations
                 return computedHash.SequenceEqual(passwordHash);
             }
         }
-        public bool UserExists(string login)
+        public bool IsUserExists(string login)
         {
             return _db.Users
                 .AsNoTracking()

@@ -38,7 +38,7 @@ namespace SocialNetwork.BusinessLogic.Services.Implementations
             _db.SaveChanges();
         }
 
-        public bool Save()=>
+        private bool Save()=>
             _db.SaveChanges() > 0 ? true : false;
         
         public UserDto Login(SignInOrUpDto loginDto)
@@ -69,13 +69,13 @@ namespace SocialNetwork.BusinessLogic.Services.Implementations
             return Save();
         }
 
-        public User GetByName(string login)=>
+        public User Get(string login)=>
             _db.Users.FirstOrDefault(u => u.Login == login.ToLower())!;
 
-        public User GetById(int id)=>
+        public User Get(int id)=>
             _db.Users.FirstOrDefault(u => u.Id ==id)!;
 
-        public IEnumerable<User> GetUsers() =>
+        public IEnumerable<User> Get() =>
             _db.Users.AsNoTracking().ToList();
     }
 }

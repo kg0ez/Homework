@@ -7,11 +7,10 @@ namespace SocialNetwork.BusinessLogic.Services.Interfaces
 	{
 		public bool Register(SignInOrUpDto registerDto, RefreshTokenDto tokenDto);
 		UserDto Login(SignInOrUpDto loginDto);
-		bool Save();
 		void Update(User user, RefreshTokenDto tokenDto);
-		User GetByName(string login);
-		User GetById(int id);
-		IEnumerable<User> GetUsers();
+		User Get(string name);
+		User Get(int id);
+		IEnumerable<User> Get();
 		bool Delete(int id);
 	}
 }

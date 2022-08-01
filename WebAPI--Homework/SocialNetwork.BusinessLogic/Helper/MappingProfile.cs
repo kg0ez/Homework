@@ -17,8 +17,7 @@ namespace SocialNetwork.BusinessLogic.Helper
 				.ForMember("Login", opt => opt.MapFrom(ud => ud.Login.ToLower()))
 				.ForMember("PasswordHash", opt => opt.MapFrom(ud => hmac.ComputeHash(Encoding.UTF8.GetBytes(ud.Password))))
 				.ForMember("PasswordSalt", opt => opt.MapFrom(ud => hmac.Key));
-			CreateMap<User, UserDto>();
-			CreateMap<UserDto, User>();
+			CreateMap<User, UserDto>().ReverseMap();
 			CreateMap<RefreshTokenDto, User>()
 				.ForMember("RefreshToken", opt => opt.MapFrom(opt => opt.Token))
 				.ForMember("TokenExpires", opt => opt.MapFrom(opt => opt.Expires))

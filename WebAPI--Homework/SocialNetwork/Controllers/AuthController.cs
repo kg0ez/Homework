@@ -23,21 +23,21 @@ namespace SocialNetwork.Controllers
         [HttpPost("register")]
         public IActionResult Register(SignInOrUpDto dto)
         {
-            if (_verification.UserExists(dto.Login))
+            if (_verification.IsUserExists(dto.Login))
                 return BadRequest("User alredy Exists");
             var newRefreshToken = _tokenService.GenerateRefreshToken();
             SetRefreshToken(newRefreshToken);
-            return _userService.Register(dto, newRefreshToken) ? Ok("User registered") : BadRequest("Failed to register");
+            return _userService.Register(dto, newRefreshToken) ? Ok("User was registered") : BadRequest("Failed to register");
         }
 
         [HttpPost("login")]
         public IActionResult Login(SignInOrUpDto request)
         {
-            var user = _userService.GetByName(request.Login);
+            var user = _userService.Get(request.Login);
             if (user == null)
                 return BadRequest("User not found.");
 
-            if (!_verification.VerifyPasswordHash(request.Password, user.PasswordHash, user.PasswordSalt))
+            if (!_verification.IsVerifyPasswordHash(request.Password, user.PasswordHash, user.PasswordSalt))
                 return BadRequest("Wrong password.");
 
             string token = _tokenService.CreateToken(user);

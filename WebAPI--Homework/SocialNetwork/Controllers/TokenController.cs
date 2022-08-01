@@ -20,7 +20,7 @@ namespace SocialNetwork.Controllers
         [HttpPost("refresh-token")]
         public ActionResult<string> RefreshToken([FromQuery] int id)
         {
-            var user = _userService.GetById(id);
+            var user = _userService.Get(id);
             if (user == null)
                 return BadRequest("User is not found");
 

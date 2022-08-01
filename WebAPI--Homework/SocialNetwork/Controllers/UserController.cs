@@ -19,7 +19,7 @@ namespace SocialNetwork.Controllers
 
         [HttpGet("GetUsers"), Authorize]
         public IActionResult Get()=>
-            Ok(_userService.GetUsers());
+            Ok(_userService.Get());
     }
 }
 

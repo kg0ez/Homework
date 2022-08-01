@@ -1,21 +1,26 @@
 ﻿<Properties StartupConfiguration="{16071BA8-E2E0-412A-BAE0-F9889B0A4B9B}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="SocialNetwork.Model/Database/ApplicationContext.cs">
+  <MonoDevelop.Ide.ItemProperties.Infrastructure.SocialNetwork.Parser FirstBuild="True" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.Workbench ActiveDocument="SocialNetwork/Controllers/AuthController.cs">
     <Files>
-      <File FileName="SocialNetwork.BusinessLogic/Helper/MappingProfile.cs" Line="1" Column="1" />
-      <File FileName="SocialNetwork.BusinessLogic/Services/Implementations/TokenService.cs" Line="20" Column="1" />
-      <File FileName="SocialNetwork.BusinessLogic/Services/Implementations/UserService.cs" Line="64" Column="1" />
-      <File FileName="SocialNetwork.BusinessLogic/Services/Interfaces/ITokenService.cs" Line="1" Column="1" />
-      <File FileName="SocialNetwork.BusinessLogic/Services/Interfaces/IUserService.cs" Line="1" Column="1" />
-      <File FileName="SocialNetwork.Model/Database/ApplicationContext.cs" Line="24" Column="6" />
-      <File FileName="SocialNetwork.Model/DatabaseModels/Post.cs" Line="1" Column="1" />
-      <File FileName="SocialNetwork.Model/DatabaseModels/User.cs" Line="1" Column="1" />
+      <File FileName="SocialNetwork.BusinessLogic/Services/Interfaces/IVerificationService.cs" Line="11" Column="1" />
+      <File FileName="SocialNetwork.BusinessLogic/Services/Interfaces/IUserService.cs" Line="10" Column="23" />
+      <File FileName="SocialNetwork.BusinessLogic/Services/Implementations/UserService.cs" Line="41" Column="16" />
+      <File FileName="SocialNetwork.BusinessLogic/Services/Implementations/VerificationService.cs" Line="32" Column="33" />
+      <File FileName="SocialNetwork/Controllers/UserController.cs" Line="22" Column="32" />
+      <File FileName="SocialNetwork.BusinessLogic/Services/Interfaces/ITokenService.cs" Line="14" Column="1" />
+      <File FileName="SocialNetwork.BusinessLogic/Services/Implementations/TokenService.cs" Line="53" Column="1" />
+      <File FileName="SocialNetwork/Properties/launchSettings.json" Line="1" Column="1" />
+      <File FileName="SocialNetwork.BusinessLogic/Helper/MappingProfile.cs" Line="21" Column="31" />
+      <File FileName="SocialNetwork/Program.cs" Line="83" Column="1" />
+      <File FileName="SocialNetwork/Controllers/TokenController.cs" Line="23" Column="40" />
+      <File FileName="SocialNetwork/Controllers/AuthController.cs" Line="23" Column="31" />
+      <File FileName="SocialNetwork.Model/Database/ApplicationContext.cs" Line="11" Column="1" />
       <File FileName="SocialNetwork.Model/DTOs/RefreshTokenDto.cs" Line="1" Column="1" />
       <File FileName="SocialNetwork.Model/DTOs/SignInOrUpDto.cs" Line="1" Column="1" />
-      <File FileName="SocialNetwork.Model/DTOs/UserDto.cs" Line="11" Column="1" />
-      <File FileName="SocialNetwork/Controllers/UserController.cs" Line="1" Column="1" />
-      <File FileName="SocialNetwork.Parser/Program.cs" Line="37" Column="22" />
-      <File FileName="SocialNetwork.Parser/Services/Interfaces/IArticle.cs" Line="9" Column="35" />
-      <File FileName="SocialNetwork.Parser/Services/Implementations/ChukotkaArticle.cs" Line="16" Column="1" />
+      <File FileName="SocialNetwork.Model/DTOs/UserDto.cs" Line="1" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -47,9 +52,7 @@
             </Node>
             <Node name="Model" expanded="True">
               <Node name="SocialNetwork.Model" expanded="True">
-                <Node name="Database" expanded="True">
-                  <Node name="ApplicationContext.cs" selected="True" />
-                </Node>
+                <Node name="Database" expanded="True" />
                 <Node name="DatabaseModels" expanded="True" />
                 <Node name="DTOs" expanded="True" />
               </Node>
@@ -62,12 +65,8 @@
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
-  <MultiItemStartupConfigurations />
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.ItemProperties.Infrastructure.SocialNetwork.Parser FirstBuild="True" />
-  <MonoDevelop.Ide.ItemProperties.Api.SocialNetwork PreferredExecutionTarget="/Applications/Safari.app" />
-  <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore />
-  </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.ItemProperties.Api.SocialNetwork PreferredExecutionTarget="/Applications/Safari.app" />
 </Properties>
