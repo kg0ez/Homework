@@ -7,6 +7,7 @@ namespace SocialNetwork.BusinessLogic.Services.Interfaces
 	{
 		string CreateToken(User user);
 		RefreshTokenDto GenerateRefreshToken();
+		User UpdateRefreshToken(User user, RefreshTokenDto tokenDto);
 	}
 }
 

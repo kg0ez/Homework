@@ -11,7 +11,6 @@ using SocialNetwork.Model.Database;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// Add services to the container.
 var connection = builder.Configuration.GetConnectionString("DefaultConnection");
 builder.Services.AddDbContext<ApplicationContext>(options => options.UseSqlServer(connection,
     opt => opt.MigrationsAssembly("SocialNetwork")));
@@ -20,7 +19,7 @@ var mappingConfig = new MapperConfiguration(mc =>
     mc.AddProfile(new MappingProfile()));
 
 builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
-//IMapper mapper = mappingConfig.CreateMapper();
+
 builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
                 .AddJwtBearer(options =>
                 {
@@ -36,10 +35,10 @@ builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
 
 builder.Services.AddTransient<ITokenService, TokenService>();
 builder.Services.AddTransient<IUserService, UserService>();
-//builder.Services.AddSingleton(mapper);
+builder.Services.AddTransient<IVerificationService, VerificationService>();
 
 builder.Services.AddControllers();
-// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
+
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen(c =>
 {
@@ -72,7 +71,6 @@ builder.Services.AddSwaggerGen(c =>
 
 var app = builder.Build();
 
-// Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
@@ -82,8 +80,8 @@ if (app.Environment.IsDevelopment())
 app.UseHttpsRedirection();
 
 app.UseAuthentication();
-app.UseAuthorization();
 
+app.UseAuthorization();
 
 app.MapControllers();
 

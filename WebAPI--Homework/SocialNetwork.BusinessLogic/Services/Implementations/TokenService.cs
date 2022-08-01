@@ -51,6 +51,13 @@ namespace SocialNetwork.BusinessLogic.Services.Implementations
             return refreshToken;
         }
 
+        public User UpdateRefreshToken(User user, RefreshTokenDto tokenDto)
+        {
+            user.TokenCreated = tokenDto.Created;
+            user.TokenExpires = tokenDto.Expires;
+            user.RefreshToken = tokenDto.Token;
+            return user;
+        }
     }
 }
 

@@ -11,47 +11,39 @@ namespace SocialNetwork.BusinessLogic.Services.Implementations
 {
 	public class UserService: IUserService
 	{
-        private readonly ITokenService _tokenService;
-        private readonly ApplicationContext _context;
+        private readonly ITokenService _token;
+        private readonly ApplicationContext _db;
         private readonly IMapper _mapper;
 
         public UserService(ApplicationContext context,
             IMapper mapper,
             ITokenService tokenService)
         {
-            _context = context;
+            _db = context;
             _mapper = mapper;
-            _tokenService = tokenService;
+            _token = tokenService;
         }
 
         public bool Register(SignInOrUpDto dto, RefreshTokenDto tokenDto)
         {
             var user = _mapper.Map<User>(dto);
-            user = UpdateUser(user, tokenDto);
-            _context.Users.Add(user);
+            user = _token.UpdateRefreshToken(user, tokenDto);
+            _db.Users.Add(user);
             return Save();
         }
 
-        public User UpdateUser(User user, RefreshTokenDto tokenDto)
+        public void Update(User user, RefreshTokenDto tokenDto)
         {
-            user.TokenCreated = tokenDto.Created;
-            user.TokenExpires = tokenDto.Expires;
-            user.RefreshToken = tokenDto.Token;
-            return user;
-        }
-
-        public void UpdateDB(User user, RefreshTokenDto tokenDto)
-        {
-            _context.Users.Update(UpdateUser(user,tokenDto));
-            _context.SaveChanges();
+            _db.Users.Update(_token.UpdateRefreshToken(user,tokenDto));
+            _db.SaveChanges();
         }
 
         public bool Save()=>
-            _context.SaveChanges() > 0 ? true : false;
+            _db.SaveChanges() > 0 ? true : false;
         
         public UserDto Login(SignInOrUpDto loginDto)
         {
-            var user = _context.Users
+            var user = _db.Users
                 .SingleOrDefault(x => x.Login == loginDto.Login);
 
             if (user == null) return null!;
@@ -63,43 +55,28 @@ namespace SocialNetwork.BusinessLogic.Services.Implementations
                 if (computedHash[i] != user.PasswordHash[i]) return null!;
 
             var userDto = _mapper.Map<User, UserDto>(user);
-            userDto.Token = _tokenService.CreateToken(user);
+            userDto.Token = _token.CreateToken(user);
 
             return userDto;
         }
-
-        public bool UserExists(string login)
+        
+        public bool Delete(int id)
         {
-            return _context.Users
-                .AsNoTracking()
-                .Any(x => x.Login == login.ToLower()) ? true : false;
-        }
-
-        public void CreatePasswordHash(string password, out byte[] passwordHash, out byte[] passwordSalt)
-        {
-            using (var hmac = new HMACSHA256())
-            {
-                passwordSalt = hmac.Key;
-                passwordHash = hmac.ComputeHash(Encoding.UTF8.GetBytes(password));
-            }
-        }
-        public bool VerifyPasswordHash(string password, byte[] passwordHash, byte[] passwordSalt)
-        {
-            using (var hmac = new HMACSHA256(passwordSalt))
-            {
-                var computedHash = hmac.ComputeHash(Encoding.UTF8.GetBytes(password));
-                return computedHash.SequenceEqual(passwordHash);
-            }
+            var hero = _db.Users.FirstOrDefault(x => x.Id == id);
+            if (hero == null)
+                return false;
+            _db.Users.Remove(hero);
+            return Save();
         }
 
         public User GetByName(string login)=>
-            _context.Users.FirstOrDefault(u => u.Login == login.ToLower())!;
+            _db.Users.FirstOrDefault(u => u.Login == login.ToLower())!;
 
         public User GetById(int id)=>
-            _context.Users.FirstOrDefault(u => u.Id ==id)!;
+            _db.Users.FirstOrDefault(u => u.Id ==id)!;
 
         public IEnumerable<User> GetUsers() =>
-            _context.Users.AsNoTracking().ToList();
+            _db.Users.AsNoTracking().ToList();
     }
 }
 
